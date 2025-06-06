@@ -1,6 +1,7 @@
 export type ResultadoSimulacao = {
   saldoFinal: number;
   totalInvestido: number;
-  juros: number;
-  historico: number[];
+  selic?: number;
+  percentualIndice?: number;
+  rendimento: number;
 };

@@ -5,13 +5,13 @@ import type { ResultadoSimulacao } from '../types/ResultadoSimulacao';
 
 export default function Form() {
   const [valorInicial, setValorInicial] = useState(1000);
-  const [aporte, setAporte] = useState(200);
-  const [juros, setJuros] = useState(1);
+  const [selic, setSelic] = useState(1);
+  const [percentualIndice, setPercentualIndice] = useState(1);
   const [meses, setMeses] = useState(12);
   const [resultado, setResultado] = useState<ResultadoSimulacao | null>(null);
 
   function simular() {
-    const r : ResultadoSimulacao = calcularJurosCompostos(valorInicial, aporte, juros, meses);
+    const r : ResultadoSimulacao = calcularJurosCompostos(valorInicial, selic, percentualIndice, meses);
     setResultado(r);
   }
 
@@ -28,20 +28,20 @@ export default function Form() {
           />
         </label>
         <label>
-          Aporte Mensal:
+          SELIC (%):
           <input
             type="number"
-            value={aporte}
-            onChange={(e) => setAporte(+e.target.value)}
+            value={selic}
+            onChange={(e) => setSelic(+e.target.value)}
             className="input"
           />
         </label>
         <label>
-          Juros Mensais (%):
+          LCI (%):
           <input
             type="number"
-            value={juros}
-            onChange={(e) => setJuros(+e.target.value)}
+            value={percentualIndice}
+            onChange={(e) => setPercentualIndice(+e.target.value)}
             className="input"
           />
         </label>
