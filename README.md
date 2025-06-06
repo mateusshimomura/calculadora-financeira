@@ -1,22 +1,21 @@
 # Calculadora Financeira
 
-Calculadora financeira para simular investimentos com juros compostos e aportes mensais, com interface interativa e gráficos que facilitam o entendimento do crescimento do investimento.
+Calculadora financeira para simular investimentos com juros compostos, com interface interativa que facilitam o entendimento do crescimento do investimento.
 
 ---
 
 ## Tecnologias
 
-- React
-- Vite
-- TypeScript
-- Tailwind CSS
+- ![React](https://img.shields.io/badge/React-19.1.0-61DAFB?logo=react&logoColor=white&style=for-the-badge)
+- ![Vite](https://img.shields.io/badge/Vite-6.3.5-646CFF?logo=vite&logoColor=white&style=for-the-badge)
+- ![TypeScript](https://img.shields.io/badge/TypeScript-5.8.3-3178C6?logo=typescript&logoColor=white&style=for-the-badge)
+- ![TailwindCSS](https://img.shields.io/badge/TailwindCSS-4.1.8-38B2AC?logo=tailwindcss&logoColor=white&style=for-the-badge)
 
 ---
 
 ## Funcionalidades
 
 - Simulação de juros compostos
-- Aporte mensal variável
 - Visualização do saldo final, total investido e juros ganhos
 - Interface simples, responsiva e amigável
 
