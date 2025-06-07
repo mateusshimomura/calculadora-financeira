@@ -1,7 +1,9 @@
 import { useState } from "react";
 import { calcularJurosCompostos } from "../utils/calculo";
-import Result from "./Result"
-import type { ResultadoSimulacao } from '../types/ResultadoSimulacao';
+import Result from "./Result";
+import type { ResultadoSimulacao } from "../types/ResultadoSimulacao";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 
 export default function Form() {
   const [valorInicial, setValorInicial] = useState(1000);
@@ -11,12 +13,21 @@ export default function Form() {
   const [resultado, setResultado] = useState<ResultadoSimulacao | null>(null);
 
   function simular() {
-    const r : ResultadoSimulacao = calcularJurosCompostos(valorInicial, selic, percentualIndice, meses);
+    const r: ResultadoSimulacao = calcularJurosCompostos(
+      valorInicial,
+      selic,
+      percentualIndice,
+      meses
+    );
     setResultado(r);
   }
 
-  return(
-    <div className="p-4 max-w-xl mx-auto">
+  return (
+    <div className="p-4 max-w-sm mx-auto">
+      <div className="grid w-full max-w-sm items-center gap-3 bg-red-500 p-5 min-h-[100px]">
+        <Label htmlFor="email">Email</Label>
+        <Input type={"email"} id="email" placeholder="Email" className="h-20" />
+      </div>
       <div className="grid gap-4">
         <label>
           Valor Inicial:
@@ -64,5 +75,5 @@ export default function Form() {
 
       {resultado && <Result resultado={resultado} />}
     </div>
-  )
+  );
 }
