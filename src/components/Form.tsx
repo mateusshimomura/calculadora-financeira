@@ -33,6 +33,7 @@ export default function Form() {
             placeholder="Valor Inicial"
             value={valorInicial}
             onChange={(e) => setValorInicial(+e.target.value)}
+            className="input-no-spinner"
           />
         </div>
 
@@ -44,6 +45,7 @@ export default function Form() {
             placeholder="Selic (%)"
             value={selic}
             onChange={(e) => setSelic(+e.target.value)}
+            className="input-no-spinner"
           />
         </div>
 
@@ -55,6 +57,7 @@ export default function Form() {
             placeholder="LCI (%)"
             value={percentualIndice}
             onChange={(e) => setPercentualIndice(+e.target.value)}
+            className="input-no-spinner"
           />
         </div>
 
@@ -66,6 +69,7 @@ export default function Form() {
             placeholder="Duração"
             value={meses}
             onChange={(e) => setMeses(+e.target.value)}
+            className="input-no-spinner"
           />
         </div>
 
