@@ -24,53 +24,59 @@ export default function Form() {
 
   return (
     <div className="p-4 max-w-sm mx-auto">
-      <div className="grid w-full max-w-sm items-center gap-3 bg-red-500 p-5 min-h-[100px]">
-        <Label htmlFor="email">Email</Label>
-        <Input type={"email"} id="email" placeholder="Email" className="h-20" />
-      </div>
       <div className="grid gap-4">
-        <label>
-          Valor Inicial:
-          <input
+        <div className="grid w-full max-w-sm items-center gap-1">
+          <Label htmlFor="valorInicial">Valor Inicial</Label>
+          <Input
             type="number"
+            id="valorInicial"
+            placeholder="Valor Inicial"
             value={valorInicial}
             onChange={(e) => setValorInicial(+e.target.value)}
-            className="input"
           />
-        </label>
-        <label>
-          SELIC (%):
-          <input
+        </div>
+
+        <div className="grid w-full max-w-sm items-center gap-1">
+          <Label htmlFor="selic">Selic (%)</Label>
+          <Input
             type="number"
+            id="selic"
+            placeholder="Selic (%)"
             value={selic}
             onChange={(e) => setSelic(+e.target.value)}
-            className="input"
           />
-        </label>
-        <label>
-          LCI (%):
-          <input
+        </div>
+
+        <div className="grid w-full max-w-sm items-center gap-1">
+          <Label htmlFor="lci">LCI (%)</Label>
+          <Input
             type="number"
+            id="lci"
+            placeholder="LCI (%)"
             value={percentualIndice}
             onChange={(e) => setPercentualIndice(+e.target.value)}
-            className="input"
           />
-        </label>
-        <label>
-          Duração (meses):
-          <input
+        </div>
+
+        <div className="grid w-full max-w-sm items-center gap-1">
+          <Label htmlFor="meses">Duração</Label>
+          <Input
             type="number"
+            id="meses"
+            placeholder="Duração"
             value={meses}
             onChange={(e) => setMeses(+e.target.value)}
-            className="input"
           />
-        </label>
-        <button
-          onClick={simular}
-          className="bg-blue-600 text-white p-2 rounded hover:bg-blue-700"
-        >
-          Simular
-        </button>
+        </div>
+
+        <div className="grid w-full max-w-sm items-center gap-1">
+          <button
+            onClick={simular}
+            className="bg-blue-600 text-white p-2 rounded hover:bg-blue-700"
+          >
+            Simular
+          </button>
+        </div>
       </div>
 
       {resultado && <Result resultado={resultado} />}
