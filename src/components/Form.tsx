@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { calcularJurosCompostos } from "../utils/calculo";
+import { calculo } from "../utils/calculo";
 import Result from "./Result";
 import type { ResultadoSimulacao } from "../types/ResultadoSimulacao";
 import { Input } from "@/components/ui/input";
@@ -7,13 +7,13 @@ import { Label } from "@/components/ui/label";
 
 export default function Form() {
   const [valorInicial, setValorInicial] = useState(1000);
-  const [selic, setSelic] = useState(1);
-  const [percentualIndice, setPercentualIndice] = useState(1);
+  const [selic, setSelic] = useState(14.75);
+  const [percentualIndice, setPercentualIndice] = useState(95);
   const [meses, setMeses] = useState(12);
   const [resultado, setResultado] = useState<ResultadoSimulacao | null>(null);
 
   function simular() {
-    const r: ResultadoSimulacao = calcularJurosCompostos(
+    const r: ResultadoSimulacao = calculo(
       valorInicial,
       selic,
       percentualIndice,
