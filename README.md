@@ -1,6 +1,6 @@
 # Calculadora Financeira
 
-Calculadora financeira para simular investimentos com juros compostos, com interface interativa que facilitam o entendimento do crescimento do investimento.
+Calculadora financeira para simular investimentos com juros compostos, com interface interativa que facilitam o entendimento do crescimento do investimento. A versão atual tem como foco o cálculo de rendimento periódico em Letras de Crédito Imobiliário (LCI).
 
 ---
 
